@@ -1,0 +1,8 @@
+{
+  "name": "morpheus",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "https://github.com/affinehat/morpheus.git",
+  "license": "AGPL-3.0-or-later",
+  "private": "true"
+}
