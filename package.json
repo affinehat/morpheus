@@ -4,5 +4,29 @@
   "description": "",
   "repository": "https://github.com/affinehat/morpheus.git",
   "license": "AGPL-3.0-or-later",
-  "private": "true"
+  "private": "true",
+  "scripts": {
+    "start:dev": "webpack-dev-server --hot",
+    "transpile": "babel src --out-dir lib",
+    "build:dev": "webpack --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-hot-loader": "^4.6.3",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.0.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
