@@ -13,6 +13,6 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU Affero General Public License for more details.
 
-See the LICENSE file for a copy of the GNU Affero General Public License,
+See the LICENSE or COPYING file for a copy of the GNU Affero General Public License,
 also available at <https://www.gnu.org/licenses/>.
 
