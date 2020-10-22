@@ -1,0 +1,10 @@
+# default text files to use LF
+* text=auto eol=lf
+
+# force batch scripts to always use CRLF
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# force bash scripts to always use LF
+*.sh text eol=lf
+
