@@ -6,3 +6,6 @@
 !.yarn/plugins
 !.yarn/versions
 
+# build
+
+dist/
