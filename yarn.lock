@@ -1345,6 +1345,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pmmmwh/react-refresh-webpack-plugin@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@pmmmwh/react-refresh-webpack-plugin@npm:0.4.2"
+  dependencies:
+    ansi-html: ^0.0.7
+    error-stack-parser: ^2.0.6
+    html-entities: ^1.2.1
+    native-url: ^0.2.6
+    schema-utils: ^2.6.5
+    source-map: ^0.7.3
+  peerDependencies:
+    "@types/webpack": 4.x
+    react-refresh: ^0.8.3
+    sockjs-client: ^1.4.0
+    type-fest: ^0.13.1
+    webpack: ">=4.43.0 <6.0.0"
+    webpack-dev-server: 3.x
+    webpack-hot-middleware: 2.x
+    webpack-plugin-serve: 0.x || 1.x
+  peerDependenciesMeta:
+    "@types/webpack":
+      optional: true
+    sockjs-client:
+      optional: true
+    type-fest:
+      optional: true
+    webpack-dev-server:
+      optional: true
+    webpack-hot-middleware:
+      optional: true
+    webpack-plugin-serve:
+      optional: true
+  checksum: cd70f32552ba053dbeefe605027c8fd97e435c0ff6d4cddb5e367d02444e3ed04f1d7fb9dca516780788c2cb17c640dcd353f0ec60412cd774f1bf0ce2d34f8a
+  languageName: node
+  linkType: hard
+
 "@reduxjs/toolkit@npm:^1.4.0":
   version: 1.4.0
   resolution: "@reduxjs/toolkit@npm:1.4.0"
@@ -1646,7 +1682,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-html@npm:0.0.7":
+"ansi-html@npm:0.0.7, ansi-html@npm:^0.0.7":
   version: 0.0.7
   resolution: "ansi-html@npm:0.0.7"
   bin:
@@ -3052,6 +3088,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"error-stack-parser@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "error-stack-parser@npm:2.0.6"
+  dependencies:
+    stackframe: ^1.1.1
+  checksum: 7abf762c20054310d33f0c0a34a2ea38f93a1b0169f5289feb96cf94d7b30d277a0df09567469be79ccfcfa49df37cddc8c59e0bc5b682a1e7e3c234e67b25c8
+  languageName: node
+  linkType: hard
+
 "es-abstract@npm:^1.17.0-next.1":
   version: 1.17.7
   resolution: "es-abstract@npm:1.17.7"
@@ -3927,7 +3972,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"html-entities@npm:^1.3.1":
+"html-entities@npm:^1.2.1, html-entities@npm:^1.3.1":
   version: 1.3.1
   resolution: "html-entities@npm:1.3.1"
   checksum: 53d37e5161230ad7f2c16dd2b54945069d84b5167113eac55e39a8fffed357378afc022d5dc66045b132ea46232cab41aee86e79dd5cd0618e0b78776b9085b5
@@ -4989,6 +5034,7 @@ fsevents@~2.1.2:
     "@fortawesome/free-regular-svg-icons": ^5.15.1
     "@fortawesome/free-solid-svg-icons": ^5.15.1
     "@fortawesome/react-fontawesome": ^0.1.11
+    "@pmmmwh/react-refresh-webpack-plugin": ^0.4.2
     "@reduxjs/toolkit": ^1.4.0
     babel-loader: ^8.1.0
     css-loader: ^5.0.0
@@ -4996,6 +5042,7 @@ fsevents@~2.1.2:
     react: ^17.0.1
     react-dom: ^17.0.1
     react-redux: ^7.2.1
+    react-refresh: ^0.9.0
     react-router-dom: ^5.2.0
     redux: ^4.0.5
     rxjs: ^6.6.3
@@ -5094,6 +5141,15 @@ fsevents@~2.1.2:
     snapdragon: ^0.8.1
     to-regex: ^3.0.1
   checksum: 2e1440c5705f0192b9d9b46bb682a1832052974dad359ed473b9f555abb5c55a08b3d5ba45d7d37c53a83f64b7f93866292824d3086a150ff7980e71874feb3b
+  languageName: node
+  linkType: hard
+
+"native-url@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "native-url@npm:0.2.6"
+  dependencies:
+    querystring: ^0.2.0
+  checksum: 064e580759f06060740636184ba8dbd8cf21a1237c769625591f8a0e956714ea27d58d601fe84c4b9600dfabc88edfb3bf51fc7a579764b5d60e0d9392aec9df
   languageName: node
   linkType: hard
 
@@ -5850,7 +5906,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"querystring@npm:0.2.0":
+"querystring@npm:0.2.0, querystring@npm:^0.2.0":
   version: 0.2.0
   resolution: "querystring@npm:0.2.0"
   checksum: 1e76c51462f0ffb148e0b2fdeb811f61377800298605229d32efcdaaaf0a8fd4314a4b4405e1fbf130a5ca421c0e51f926fab5bb9f8b9b3b8c394f4e2d33d3d1
@@ -5940,6 +5996,13 @@ fsevents@~2.1.2:
     react-native:
       optional: true
   checksum: 94ef2d0f38608e4b659b8f7e3998d33a00066b5d3e52129121f92c354564a3e989ee67ba81395e5b681415a75917e549e0f45e1b251db3a20cff7713e7cfd8f7
+  languageName: node
+  linkType: hard
+
+"react-refresh@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "react-refresh@npm:0.9.0"
+  checksum: 300dc431389f4c532bdfec08d5bc59b591c8c440486a7d5770c8954adf3afe62501b659c5acbdb7831751e8be506eb90a6f72491fab40352f3b3fba16897acf6
   languageName: node
   linkType: hard
 
@@ -6714,6 +6777,13 @@ resolve@^1.3.2:
   languageName: node
   linkType: hard
 
+"source-map@npm:^0.7.3":
+  version: 0.7.3
+  resolution: "source-map@npm:0.7.3"
+  checksum: 351ce26ffa1ebf203660c0d70d7566c81e65d2d994d1c2d94da140808e02da34961673ce12ecea9b40797b96fbeb8c70bf71a4ad9f779f1a4fdbba75530bb386
+  languageName: node
+  linkType: hard
+
 "spdy-transport@npm:^3.0.0":
   version: 3.0.0
   resolution: "spdy-transport@npm:3.0.0"
@@ -6777,6 +6847,13 @@ resolve@^1.3.2:
   dependencies:
     figgy-pudding: ^3.5.1
   checksum: 828c8c24c993c77646e22e869f93ee0fd3406fed7d793a46fd2cb88b8fcf49ca610ac79a88776b2be62df92be7878cda334c8d98e041d6182eac33cf16cc65b6
+  languageName: node
+  linkType: hard
+
+"stackframe@npm:^1.1.1":
+  version: 1.2.0
+  resolution: "stackframe@npm:1.2.0"
+  checksum: 71e2868a529123e9ca1cf510192a7de879b8d92b5829c7f58d5576e1500cbedf22b5d9cc86589c547b6842abcf01cea13979ab8301b51e85bdb6267a6f9288f2
   languageName: node
   linkType: hard
 
