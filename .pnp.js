@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:7.2.1"],
             ["react-router-dom", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:5.2.0"],
             ["redux", "npm:4.0.5"],
+            ["rxjs", "npm:6.6.3"],
             ["style-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:2.0.0"],
             ["webpack", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:4.44.2"],
             ["webpack-cli", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:3.3.12"],
@@ -5927,6 +5928,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:7.2.1"],
             ["react-router-dom", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:5.2.0"],
             ["redux", "npm:4.0.5"],
+            ["rxjs", "npm:6.6.3"],
             ["style-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:2.0.0"],
             ["webpack", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:4.44.2"],
             ["webpack-cli", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:3.3.12"],
@@ -7458,6 +7460,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["run-queue", "npm:1.0.3"],
             ["aproba", "npm:1.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["rxjs", [
+        ["npm:6.6.3", {
+          "packageLocation": "./.yarn/cache/rxjs-npm-6.6.3-a1e67d677b-61a3da6db9.zip/node_modules/rxjs/",
+          "packageDependencies": [
+            ["rxjs", "npm:6.6.3"],
+            ["tslib", "npm:1.14.1"]
           ],
           "linkType": "HARD",
         }]
