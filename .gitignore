@@ -1,11 +1,20 @@
-# yarn v2
-
-.yarn/*
-!.yarn/cache
-!.yarn/releases
-!.yarn/plugins
-!.yarn/versions
-
 # build
+/dist/
 
-dist/
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# npm
+node_modules/
+package-lock.json
