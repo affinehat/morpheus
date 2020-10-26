@@ -38,6 +38,7 @@ module.exports = {
     plugins: [ PnpWebpackPlugin ],
     alias: {
       components: `${root}/src/components`,
+      editor: `${root}/src/editor`,
     },
   },
   resolveLoader: {
