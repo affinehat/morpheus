@@ -1,8 +1,16 @@
 import React from 'react'
 
 export const ControlledTextarea = props => {
+  const { onChange :onChangeProp, ...otherProps } = props
+
+  const processChange = event => {
+    const value = event.target.value
+    onChangeProp(value)
+  }
+
+
   return (
-    <textarea {...props}/>
+    <textarea {...otherProps} onChange={processChange}/>
   )
 }
 
