@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { from } from 'rxjs'
 
 import editorReducer from 'editor/editorSlice'
-import rhymeInputReducer from 'editor/rhymeInputSlice'
+import wordReducer from 'editor/wordSlice'
 
 const loadState = () => {
   try {
@@ -28,7 +28,7 @@ const preloadedState = loadState()
 const store = configureStore({
   reducer: {
     editor: editorReducer,
-    userInput: rhymeInputReducer,
+    word: wordReducer,
   },
   preloadedState
 })

@@ -1,11 +1,19 @@
 import React from "react";
-import APIWrapper from 'api/APIWrapper';
+import show from "api/APIWrapper"
 
-export default function RhymeInput(props) {
+const RhymeInput = props => {
+  show();
+  const { onChange :onChangeProp, ...otherProps } = props;
+
+  const handleChange = e => {
+    const newValue = e.target.value;
+    onChangeProp(newValue);
+  }
+
   return (
     <div>
       <h1>Search for rhymes</h1>
-      <input id="search-box" type="text" />
+      <input {...otherProps} onChange={handleChange} id="search-box" type="text" />
       <button id="myButton" type="submit">
         Go
       </button>
@@ -13,3 +21,5 @@ export default function RhymeInput(props) {
     </div>
   );
 }
+
+export default RhymeInput;

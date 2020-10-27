@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ControlledTextarea = props => {
+const ControlledTextarea = props => {
   const { onChange :onChangeProp, ...otherProps } = props
 
   const processChange = event => {
@@ -15,4 +15,3 @@ export const ControlledTextarea = props => {
 }
 
 export default ControlledTextarea
-
