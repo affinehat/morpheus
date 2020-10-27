@@ -39,6 +39,7 @@ module.exports = {
     alias: {
       components: `${root}/src/components`,
       editor: `${root}/src/editor`,
+      api: `${root}/src/api`,
     },
   },
   resolveLoader: {

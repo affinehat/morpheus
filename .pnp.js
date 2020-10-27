@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@pmmmwh/react-refresh-webpack-plugin", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:0.4.2"],
             ["@reduxjs/toolkit", "npm:1.4.0"],
             ["autoprefixer", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:10.0.1"],
+            ["axios", "npm:0.21.0"],
             ["babel-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:8.1.0"],
             ["css-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:5.0.0"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
@@ -2559,6 +2560,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/aws4-npm-1.10.1-c15d26e3d7-53f2897324.zip/node_modules/aws4/",
           "packageDependencies": [
             ["aws4", "npm:1.10.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["axios", [
+        ["npm:0.21.0", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.21.0-9223cb0552-4b08ecab39.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.21.0"],
+            ["follow-redirects", "npm:1.13.0"]
           ],
           "linkType": "HARD",
         }]
@@ -6302,6 +6313,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@pmmmwh/react-refresh-webpack-plugin", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:0.4.2"],
             ["@reduxjs/toolkit", "npm:1.4.0"],
             ["autoprefixer", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:10.0.1"],
+            ["axios", "npm:0.21.0"],
             ["babel-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:8.1.0"],
             ["css-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:5.0.0"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
