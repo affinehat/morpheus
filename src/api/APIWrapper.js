@@ -1,38 +1,40 @@
 import React, {useEffect} from "react";
 import {fromEvent} from "rxjs";
 import {ajax} from "rxjs/ajax";
+import store from "../store";
 
-export default function loadAPICall(rhyme) {
+export default function APIWrapper(btnID, baseURL) {
+  const state = store.getState();
+
   useEffect(() => {
-    const button = document.getElementById("myButton");
-    const displayResults = document.getElementById("results");
+    const targetBtn = document.getElementById(btnID);
+    const resultsDiv = document.getElementById("results");
 
-    const myObservable = fromEvent(button, "click");
+    const targetObservable = fromEvent(targetBtn, "click");
 
-    const myObserver = {
+    const targetObserver = {
       next: () => {
-        const rhymeURL =
-          `https://rhymebrain.com/talk?function=getRhymes&word=` + rhyme;
+        const fullURL = baseURL + state.word.word;
 
-        const results = ajax(rhymeURL);
+        const response = ajax(fullURL);
 
-        const subscription2 = results.subscribe(
+        const ajaxSubscription = response.subscribe(
           res => {
-            displayResults.innerHTML = res.response
+            resultsDiv.innerHTML = res.response
               .map(entry => {
                 return entry.word;
               })
-              .slice(0, 10);
+              .slice(0, 20);
           },
           err => console.error(err)
         );
       },
       error: error => console.log(error),
-      complete: () => console.log("complete!")
+      complete: () => console.log("Complete!")
     };
 
-    const subscription = myObservable.subscribe(myObserver);
+    const targetSubscription = targetObservable.subscribe(targetObserver);
 
-    return () => subscription.unsubscribe();
-  }, []);
+    return () => targetSubscription.unsubscribe();
+  }, [state.word]);
 }

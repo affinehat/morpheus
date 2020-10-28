@@ -17,8 +17,11 @@ const WordInput = props => {
         id="search-box"
         type="text"
       />
-      <button id="myButton" type="submit">
-        Go
+      <button id="rhymeBtn" type="submit">
+        Rhymes
+      </button>{" "}
+      <button id="synonymBtn" type="submit">
+        Synonyms
       </button>
       <div id="results"></div>
     </div>

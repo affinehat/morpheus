@@ -1,13 +1,15 @@
 import React from "react";
 import {connect} from "react-redux";
 
-import loadAPICall from "api/APIWrapper";
+import loadRhymeAPI from "api/RhymeAPI";
+import loadSynonymAPI from "api/SynonymAPI";
 import WordInput from "components/WordInput";
 import {setWord} from "word/wordSlice";
 
 export const WordEditor = props => {
   const {word, setWord} = props;
-  loadAPICall(word);
+  loadRhymeAPI();
+  loadSynonymAPI();
   return <WordInput wordValue={word} setState={setWord} />;
 };
 
