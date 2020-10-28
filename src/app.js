@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import LyricsEditor from 'editor/LyricsEditor'
-import RhymeInput from 'components/RhymeInput'
+import WordEditor from 'word/WordEditor'
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         <Route exact path="/">
           <div className="grid grid-cols-2">
             <LyricsEditor className="editor min-h-screen text-white border-4 border-blue-300 rounded-md" />
-            <RhymeInput></RhymeInput>
+            <WordEditor></WordEditor>
           </div>
         </Route>
       </Switch>

@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { from } from 'rxjs'
 
 import editorReducer from 'editor/editorSlice'
-import wordReducer from 'editor/wordSlice'
+import wordReducer from 'word/wordSlice'
 
 const loadState = () => {
   try {

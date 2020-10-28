@@ -39,6 +39,7 @@ module.exports = {
     alias: {
       components: `${root}/src/components`,
       editor: `${root}/src/editor`,
+      word: `${root}/src/word`,
       api: `${root}/src/api`,
     },
   },
