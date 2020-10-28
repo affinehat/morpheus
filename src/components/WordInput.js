@@ -1,9 +1,6 @@
 import React from "react";
-import loadAPICall from "api/APIWrapper";
 
 const WordInput = props => {
-  loadAPICall();
-
   const {setState, wordValue} = props;
 
   const handleChange = e => {

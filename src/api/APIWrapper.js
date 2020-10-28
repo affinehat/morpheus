@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {fromEvent} from "rxjs";
 import {ajax} from "rxjs/ajax";
 
-export default function loadAPICall() {
+export default function loadAPICall(rhyme) {
   useEffect(() => {
     const button = document.getElementById("myButton");
     const displayResults = document.getElementById("results");
@@ -16,8 +16,14 @@ export default function loadAPICall() {
 
         const results = ajax(rhymeURL);
 
-        const subscribe = results.subscribe(
-          res => console.log(res.response),
+        const subscription2 = results.subscribe(
+          res => {
+            displayResults.innerHTML = res.response
+              .map(entry => {
+                return entry.word;
+              })
+              .slice(0, 10);
+          },
           err => console.error(err)
         );
       },
