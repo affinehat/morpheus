@@ -37,6 +37,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
     plugins: [ PnpWebpackPlugin ],
     alias: {
+      api: `${root}/src/api`,
       components: `${root}/src/components`,
       editor: `${root}/src/editor`,
     },
