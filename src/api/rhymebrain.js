@@ -25,9 +25,9 @@ const rhymebrainEpic = action$ => action$.pipe(
     callAPI({
       protocol: 'https',
       host: 'rhymebrain.com',
-      path: 'talk?function=getRhymes&maxResults=20&word=' + action.payload,
+      path: 'talk?function=getRhymes&word=' + action.payload,
     }).pipe(
-      map(ajax => rhymebrainLoaded(ajax.response))
+      map(ajax => rhymebrainLoaded(ajax.response.slice(0, 20)))
     )
   )
 )
