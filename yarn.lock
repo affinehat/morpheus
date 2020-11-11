@@ -1290,6 +1290,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codemirror/next@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "@codemirror/next@npm:0.14.0"
+  dependencies:
+    lezer: ^0.12.0
+    lezer-cpp: ^0.12.0
+    lezer-css: ^0.12.0
+    lezer-html: ^0.12.0
+    lezer-java: ^0.12.0
+    lezer-javascript: ^0.12.0
+    lezer-json: ^0.12.0
+    lezer-python: ^0.12.0
+    lezer-rust: ^0.12.0
+    lezer-tree: ^0.12.0
+    lezer-xml: ^0.12.0
+    style-mod: ^3.0.0
+    w3c-keyname: ^2.2.4
+  checksum: 1c3fd2c00f5beb08ae6e68ec68907e17edce5d2f9868ca3d7fd75ab0a15ec51acfb19ea1715398db7312c3325786e21cb23b9e4820946cf5f3bff6f78578d20e
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:^0.2.32":
   version: 0.2.32
   resolution: "@fortawesome/fontawesome-common-types@npm:0.2.32"
@@ -4956,6 +4977,103 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"lezer-cpp@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-cpp@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: 7bb9c37f6a5a3fda0667d741d4c699e34cb92699505184f7d597d5986cf3580409c12090179f9881e570b97271d169f0d26d4d0062b43f5793511b4b1db022a3
+  languageName: node
+  linkType: hard
+
+"lezer-css@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-css@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: 1d5ad5beb37ff5a87df3d71eb74af7c18d987c65f06d821cca31be99b13dfd14791505f65d19db9cd48273c0edc4a65cf42f4ad3fb4d0b23870ae8ab1fc12793
+  languageName: node
+  linkType: hard
+
+"lezer-html@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-html@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: 10b24500dfbcfd685af31fa3a7de0cdeebbfedb8cb410cda30a77497c24ed8d9d4d65db30f118f17509553999514bfe3f0a79276185a985eb5c35b98eef03053
+  languageName: node
+  linkType: hard
+
+"lezer-java@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-java@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: 7e97f57a658dc788bdd8541fc4219dd031ab9217752e0da70f59fc6e429d10b12fac419f4d900254c35e562d1f1e43c13d574485499fce2411497a5c4b68753e
+  languageName: node
+  linkType: hard
+
+"lezer-javascript@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-javascript@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: b677bd92d3241fe0c5259038c03ab17d55d4cf4232b79361b418f3ee54395cca53d3b6dbe338ec3777caa11799a4ea7aaf1d2db51393898e8a16f44019a90d15
+  languageName: node
+  linkType: hard
+
+"lezer-json@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-json@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: 21951606cf4b7917974237a90dc627aec210b0cf85bbced1c4e3877cbded0f6391ced95efffe32f3a79c22c3e5bdb9f87a400db3afd7b6aae9ab5cfc187d00aa
+  languageName: node
+  linkType: hard
+
+"lezer-python@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-python@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: a3c317f5a39ad9ec8323353186e6b1b936bdbca63a0f297e00530867739abc4074691e7861b2cfadfcabf745009d1c3418c1201a4eb924ae62ad49e8d44ab087
+  languageName: node
+  linkType: hard
+
+"lezer-rust@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-rust@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: a735843cd8f5e55568786011e7bcd5a92aae974a47e4a7b55198929b7b9cdc7bf2069e5c13c6fab8dc793171a5efd3590e70c63374b9d095c200d9789ae38726
+  languageName: node
+  linkType: hard
+
+"lezer-tree@npm:^0.12.0":
+  version: 0.12.3
+  resolution: "lezer-tree@npm:0.12.3"
+  checksum: 0712ca9aa96eb0f2dc7ba63d83560bfc7125de3c275755ea4033b1361e9d74b13c7855af01b243b899b36ffd71d83a6029de0ddd5551ca7afba29fea3f205e13
+  languageName: node
+  linkType: hard
+
+"lezer-xml@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer-xml@npm:0.12.0"
+  dependencies:
+    lezer: ^0.12.0
+  checksum: 5fe8271c60c0423dc4fe42d10f801a3cf56df71e1e106ae2c90a4861b6285b463bcb23e65bebcf592e22f90ca6bcf97e5bce22d5f3271be80ea2db5b2703e353
+  languageName: node
+  linkType: hard
+
+"lezer@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "lezer@npm:0.12.0"
+  dependencies:
+    lezer-tree: ^0.12.0
+  checksum: d74afe8e95dd0dda760c201898b583d5824cab1f21f69b54582ae430a05fef3ac35d522d4606fb91ed98e7de614d184b2ae0b1a64486d14f7e55c33b235ad877
+  languageName: node
+  linkType: hard
+
 "line-column@npm:^1.0.2":
   version: 1.0.2
   resolution: "line-column@npm:1.0.2"
@@ -5323,6 +5441,7 @@ fsevents@~2.1.2:
     "@babel/core": ^7.12.3
     "@babel/preset-env": ^7.12.1
     "@babel/preset-react": ^7.12.1
+    "@codemirror/next": ^0.14.0
     "@fortawesome/fontawesome-svg-core": ^1.2.32
     "@fortawesome/free-regular-svg-icons": ^5.15.1
     "@fortawesome/free-solid-svg-icons": ^5.15.1
@@ -7508,6 +7627,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"style-mod@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "style-mod@npm:3.1.0"
+  checksum: dcf6b46b257972dc38de7edbea4de56dc372610be9546156e29860a4eb4a3868cac29b416e764e1e18d18b068b67bcb046a60e3221192d1abedb72e445bb4328
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^5.3.0, supports-color@npm:^5.4.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -8015,6 +8141,13 @@ fsevents@~2.1.2:
   version: 1.1.2
   resolution: "vm-browserify@npm:1.1.2"
   checksum: fc571a62d2cf797ae8773ebb3cb0d2bea50ed02059e128dd9087975929fce4c80a6485ce1aaf7d44ef69db99dfdcde50b6be5d5eb73b296660d761c32fb544fe
+  languageName: node
+  linkType: hard
+
+"w3c-keyname@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "w3c-keyname@npm:2.2.4"
+  checksum: b711eaa9867030e5702131dfd434620125f1a337b98a473a4d60254fd4912559b16f2b8642975b881d6ec9387bf378b9bf838873151fd036b9ba8c356b4e42aa
   languageName: node
   linkType: hard
 

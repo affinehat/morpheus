@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.12.3"],
             ["@babel/preset-env", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:7.12.1"],
             ["@babel/preset-react", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:7.12.1"],
+            ["@codemirror/next", "npm:0.14.0"],
             ["@fortawesome/fontawesome-svg-core", "npm:1.2.32"],
             ["@fortawesome/free-regular-svg-icons", "npm:5.15.1"],
             ["@fortawesome/free-solid-svg-icons", "npm:5.15.1"],
@@ -1735,6 +1736,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-validator-identifier", "npm:7.10.4"],
             ["lodash", "npm:4.17.20"],
             ["to-fast-properties", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@codemirror/next", [
+        ["npm:0.14.0", {
+          "packageLocation": "./.yarn/cache/@codemirror-next-npm-0.14.0-b99f29146f-1c3fd2c00f.zip/node_modules/@codemirror/next/",
+          "packageDependencies": [
+            ["@codemirror/next", "npm:0.14.0"],
+            ["lezer", "npm:0.12.0"],
+            ["lezer-cpp", "npm:0.12.0"],
+            ["lezer-css", "npm:0.12.0"],
+            ["lezer-html", "npm:0.12.0"],
+            ["lezer-java", "npm:0.12.0"],
+            ["lezer-javascript", "npm:0.12.0"],
+            ["lezer-json", "npm:0.12.0"],
+            ["lezer-python", "npm:0.12.0"],
+            ["lezer-rust", "npm:0.12.0"],
+            ["lezer-tree", "npm:0.12.3"],
+            ["lezer-xml", "npm:0.12.0"],
+            ["style-mod", "npm:3.1.0"],
+            ["w3c-keyname", "npm:2.2.4"]
           ],
           "linkType": "HARD",
         }]
@@ -5887,6 +5910,115 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lezer", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-npm-0.12.0-5a5f3f2622-d74afe8e95.zip/node_modules/lezer/",
+          "packageDependencies": [
+            ["lezer", "npm:0.12.0"],
+            ["lezer-tree", "npm:0.12.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-cpp", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-cpp-npm-0.12.0-8a9ad52bb6-7bb9c37f6a.zip/node_modules/lezer-cpp/",
+          "packageDependencies": [
+            ["lezer-cpp", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-css", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-css-npm-0.12.0-f9a2820e6d-1d5ad5beb3.zip/node_modules/lezer-css/",
+          "packageDependencies": [
+            ["lezer-css", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-html", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-html-npm-0.12.0-38516d534d-10b24500df.zip/node_modules/lezer-html/",
+          "packageDependencies": [
+            ["lezer-html", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-java", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-java-npm-0.12.0-ddd8cc0d23-7e97f57a65.zip/node_modules/lezer-java/",
+          "packageDependencies": [
+            ["lezer-java", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-javascript", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-javascript-npm-0.12.0-31c642280e-b677bd92d3.zip/node_modules/lezer-javascript/",
+          "packageDependencies": [
+            ["lezer-javascript", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-json", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-json-npm-0.12.0-89b2c380c0-21951606cf.zip/node_modules/lezer-json/",
+          "packageDependencies": [
+            ["lezer-json", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-python", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-python-npm-0.12.0-f3c36fc39e-a3c317f5a3.zip/node_modules/lezer-python/",
+          "packageDependencies": [
+            ["lezer-python", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-rust", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-rust-npm-0.12.0-b752d4ca36-a735843cd8.zip/node_modules/lezer-rust/",
+          "packageDependencies": [
+            ["lezer-rust", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-tree", [
+        ["npm:0.12.3", {
+          "packageLocation": "./.yarn/cache/lezer-tree-npm-0.12.3-73e0c0d079-0712ca9aa9.zip/node_modules/lezer-tree/",
+          "packageDependencies": [
+            ["lezer-tree", "npm:0.12.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lezer-xml", [
+        ["npm:0.12.0", {
+          "packageLocation": "./.yarn/cache/lezer-xml-npm-0.12.0-6e419acc5d-5fe8271c60.zip/node_modules/lezer-xml/",
+          "packageDependencies": [
+            ["lezer-xml", "npm:0.12.0"],
+            ["lezer", "npm:0.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["line-column", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/line-column-npm-1.0.2-bdeb1193f9-e6fa785b0c.zip/node_modules/line-column/",
@@ -6295,6 +6427,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.12.3"],
             ["@babel/preset-env", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:7.12.1"],
             ["@babel/preset-react", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:7.12.1"],
+            ["@codemirror/next", "npm:0.14.0"],
             ["@fortawesome/fontawesome-svg-core", "npm:1.2.32"],
             ["@fortawesome/free-regular-svg-icons", "npm:5.15.1"],
             ["@fortawesome/free-solid-svg-icons", "npm:5.15.1"],
@@ -8765,6 +8898,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["style-mod", [
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/style-mod-npm-3.1.0-148ac2d482-dcf6b46b25.zip/node_modules/style-mod/",
+          "packageDependencies": [
+            ["style-mod", "npm:3.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["supports-color", [
         ["npm:5.5.0", {
           "packageLocation": "./.yarn/cache/supports-color-npm-5.5.0-183ac537bc-edacee6425.zip/node_modules/supports-color/",
@@ -9346,6 +9488,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/vm-browserify-npm-1.1.2-f96404b36f-fc571a62d2.zip/node_modules/vm-browserify/",
           "packageDependencies": [
             ["vm-browserify", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["w3c-keyname", [
+        ["npm:2.2.4", {
+          "packageLocation": "./.yarn/cache/w3c-keyname-npm-2.2.4-8c6e5969c5-b711eaa986.zip/node_modules/w3c-keyname/",
+          "packageDependencies": [
+            ["w3c-keyname", "npm:2.2.4"]
           ],
           "linkType": "HARD",
         }]
