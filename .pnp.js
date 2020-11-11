@@ -60,6 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-refresh", "npm:0.9.0"],
             ["react-router-dom", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:5.2.0"],
             ["redux", "npm:4.0.5"],
+            ["redux-observable", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:1.2.0"],
             ["rxjs", "npm:6.6.3"],
             ["style-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:2.0.0"],
             ["tailwindcss", "npm:1.9.5"],
@@ -6446,6 +6447,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-refresh", "npm:0.9.0"],
             ["react-router-dom", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:5.2.0"],
             ["redux", "npm:4.0.5"],
+            ["redux-observable", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:1.2.0"],
             ["rxjs", "npm:6.6.3"],
             ["style-loader", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:2.0.0"],
             ["tailwindcss", "npm:1.9.5"],
@@ -7894,6 +7896,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux", "npm:4.0.5"],
             ["loose-envify", "npm:1.4.0"],
             ["symbol-observable", "npm:1.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["redux-observable", [
+        ["virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:1.2.0", {
+          "packageLocation": "./.yarn/$$virtual/redux-observable-virtual-7a125e975e/0/cache/redux-observable-npm-1.2.0-46cb237dc3-e9405ed5f9.zip/node_modules/redux-observable/",
+          "packageDependencies": [
+            ["redux-observable", "virtual:240abee5d463e5b01e5c80787a09eb7d2cbaa13a642dd5484c7c859b87fafdd707352429002099666bf84bd564254c4fd75361eee37b809eb00a242a76d60d17#npm:1.2.0"],
+            ["@types/redux", null],
+            ["@types/rxjs", null],
+            ["redux", "npm:4.0.5"],
+            ["rxjs", "npm:6.6.3"]
+          ],
+          "packagePeers": [
+            "@types/redux",
+            "@types/rxjs",
+            "redux",
+            "rxjs"
           ],
           "linkType": "HARD",
         }]

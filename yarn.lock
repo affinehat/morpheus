@@ -5460,6 +5460,7 @@ fsevents@~2.1.2:
     react-refresh: ^0.9.0
     react-router-dom: ^5.2.0
     redux: ^4.0.5
+    redux-observable: ^1.2.0
     rxjs: ^6.6.3
     style-loader: ^2.0.0
     tailwindcss: ^1.9.5
@@ -6696,6 +6697,16 @@ fsevents@~2.1.2:
     css-unit-converter: ^1.1.1
     postcss-value-parser: ^3.3.0
   checksum: c1cbf51e640f1eef545b70d86a5df1b521939227e85aad20e8a79c8aad433ca9d4f3f8cb7623929013d98d985a244bfd35710294be3866c562cf80558a294c96
+  languageName: node
+  linkType: hard
+
+"redux-observable@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "redux-observable@npm:1.2.0"
+  peerDependencies:
+    redux: ">=4 <5"
+    rxjs: ">=6.0.0-beta.0 <7"
+  checksum: e9405ed5f9725dda0afbcc2a0a4693be2a08836bc5ee591748c778331c0530b055dca6068f1b280e3a1516f4a1af137f8a35558fa77632bbe016adcef4bf98bb
   languageName: node
   linkType: hard
 
