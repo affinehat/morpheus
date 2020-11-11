@@ -40,6 +40,7 @@ module.exports = {
       api: `${root}/src/api`,
       components: `${root}/src/components`,
       editor: `${root}/src/editor`,
+      info: `${root}/src/info-panel`,
     },
   },
   resolveLoader: {
