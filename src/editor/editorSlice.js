@@ -7,8 +7,9 @@ const editorSlice = createSlice({
   initialState: {},
   reducers: {
     setText: (state, action) => void(state.text = action.payload),
+    setCurrentWord: (state, action) => void(state.currentWord = action.payload),
   },
 })
 
 export default editorSlice.reducer
-export const { setText } = editorSlice.actions
+export const { setText, setCurrentWord } = editorSlice.actions
