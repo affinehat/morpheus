@@ -1,3 +1,12 @@
 .editor {
   background-color: #263238;
 }
+
+.apiHeading{
+  margin-left: 5px;
+}
+
+.apiSection:not(:first-child){
+  margin-top: 50px;
+  min-height: 144px;/*change to corresponding dynamic value*/
+}

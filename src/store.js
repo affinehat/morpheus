@@ -3,8 +3,9 @@ import { combineEpics, createEpicMiddleware } from 'redux-observable'
 import { from } from 'rxjs'
 
 import editorReducer from 'editor/editorSlice'
-import { rhymebrainReducer, rhymebrainEpic } from 'api/rhymebrain'
-
+import { apiStatusReducer, apiCallInitEpic } from 'api/apiStatus'
+import { rhymebrainReducer, rhymebrainEpic } from 'api/APIs/rhymebrain'
+import { datamuseReducer, datamuseEpic } from 'api/APIs/datamuse'
 
 const loadState = () => {
   try {
@@ -30,13 +31,17 @@ const preloadedState = loadState()
 
 const epicMiddleware = createEpicMiddleware()
 const rootEpic = combineEpics(
-  rhymebrainEpic
+  apiCallInitEpic,
+  rhymebrainEpic,
+  datamuseEpic,
 )
 
 const store = configureStore({
   reducer: {
     editor: editorReducer,
+    apiStatus: apiStatusReducer,
     rhymebrain: rhymebrainReducer,
+    datamuse: datamuseReducer,
   },
   middleware: [epicMiddleware, ...getDefaultMiddleware()],
   preloadedState
@@ -50,4 +55,3 @@ store$.subscribe(next => {
 })
 
 export default store
-

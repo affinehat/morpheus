@@ -39,8 +39,8 @@ module.exports = {
     alias: {
       api: `${root}/src/api`,
       components: `${root}/src/components`,
-      editor: `${root}/src/editor`,
-      info: `${root}/src/info-panel`,
+      editor: `${root}/src/components/editor`,
+      info: `${root}/src/components/info-panel`,
     },
   },
   resolveLoader: {
