@@ -3,7 +3,7 @@ import { combineEpics, createEpicMiddleware } from 'redux-observable'
 import { from } from 'rxjs'
 
 import editorReducer from 'editor/editorSlice'
-import { apiStatusReducer, apiCallInitEpic } from 'api/apiStatus'
+import { initializeAPICallEpic } from 'api/initializeAPICallEpic'
 import { rhymebrainReducer, rhymebrainEpic } from 'api/APIs/rhymebrain'
 import { datamuseReducer, datamuseEpic } from 'api/APIs/datamuse'
 
@@ -31,7 +31,7 @@ const preloadedState = loadState()
 
 const epicMiddleware = createEpicMiddleware()
 const rootEpic = combineEpics(
-  apiCallInitEpic,
+  initializeAPICallEpic,
   rhymebrainEpic,
   datamuseEpic,
 )
@@ -39,7 +39,6 @@ const rootEpic = combineEpics(
 const store = configureStore({
   reducer: {
     editor: editorReducer,
-    apiStatus: apiStatusReducer,
     rhymebrain: rhymebrainReducer,
     datamuse: datamuseReducer,
   },

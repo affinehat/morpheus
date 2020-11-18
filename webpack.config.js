@@ -39,7 +39,7 @@ module.exports = {
     alias: {
       api: `${root}/src/api`,
       components: `${root}/src/components`,
-      editor: `${root}/src/components/editor`,
+      editor: `${root}/src/editor`,
       info: `${root}/src/components/info-panel`,
     },
   },

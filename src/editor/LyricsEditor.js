@@ -36,7 +36,7 @@ export const LyricsEditor = props => {
     updates$
       .pipe(
         filter(update => update.docChanged),
-        debounceTime(500),
+        debounceTime(250),
       )
       .subscribe(update => {
         setText(update.state.doc.toString())
