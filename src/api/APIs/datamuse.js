@@ -1,8 +1,10 @@
-import { map, switchMap } from 'rxjs/operators'
+import { of } from "rxjs"
+import { map, switchMap, mergeMap } from 'rxjs/operators'
 import { createSlice } from '@reduxjs/toolkit'
 import { ofType } from 'redux-observable'
 
 import callAPI from 'api/apiRequestWrapper'
+import { updateAPIStatus } from 'api/apiStatus'
 
 const datamuseSlice = createSlice({
   name: 'datamuse',
@@ -26,7 +28,18 @@ const datamuseEpic = (action$, state$) => action$.pipe(
       host: 'api.datamuse.com',
       path: 'words?rel_syn=' + state$.value.editor.currentWord,
     }).pipe(
-      map(ajax => datamuseLoaded(ajax.response.length?ajax.response.slice(0, 20):[{"word": "No matches found"}])),
+      map(ajax => {
+        return datamuseLoaded(ajax.response.length?
+          ajax.response.slice(0, 20)
+          :
+          [{"word": "No matches found"}])
+      }),
+      mergeMap(action => {
+        return of(action, updateAPIStatus({
+          ...state$.value.apiStatus,
+          datamuseLoaded: true,
+        }));
+      }),
     )
   ),
 )
