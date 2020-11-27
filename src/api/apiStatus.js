@@ -1,39 +1,23 @@
-import { of } from "rxjs"
-import { createSlice } from '@reduxjs/toolkit'
-import { switchMap, distinctUntilKeyChanged, filter } from "rxjs/operators"
-import { ofType } from "redux-observable"
-
-import { setCurrentWord } from "editor/editorSlice"
-import { rhymebrainDecoupled } from "api/APIs/rhymebrain"
-import { datamuseDecoupled } from "api/APIs/datamuse"
+import {of} from "rxjs";
+import {createSlice} from "@reduxjs/toolkit";
+import {switchMap, distinctUntilKeyChanged, filter} from "rxjs/operators";
+import {ofType} from "redux-observable";
 
 const apiStatusSlice = createSlice({
-  name: 'apiStatus',
-  initialState: null,
+  name: "apiStatus",
+  initialState: {},
   reducers: {
-    update: (state, action) => action.payload,
-  },
-})
+    started: (state, action) => void (state[action.payload] = false),
+    loaded: (state, action) => void (state[action.payload] = true),
+    errored: (state, action) =>
+      void (state[action.payload].error = action.payload.error)
+  }
+});
 
-const apiStatusReducer = apiStatusSlice.reducer
-const selectAPIStatus = state => state.apiStatus
-const updateAPIStatus = apiStatusSlice.actions.update
+const apiStatusReducer = apiStatusSlice.reducer;
+const selectAPIStatus = state => state.apiStatus;
+const apiStarted = apiStatusSlice.actions.started;
+const apiLoaded = apiStatusSlice.actions.loaded;
+const apiErrored = apiStatusSlice.actions.errored;
 
-const initializeAPICallEpic = action$ =>
-  action$.pipe(
-    ofType(setCurrentWord.type),
-    distinctUntilKeyChanged("payload"),
-    filter(action => action.payload.trim() !== ""),
-    switchMap(action => {
-      return of(
-        updateAPIStatus({
-          rhymebrainLoaded: false,
-          datamuseLoaded: false,
-        }),
-        rhymebrainDecoupled(),
-        datamuseDecoupled(),
-      );
-    }),
-  );
-
-export {apiStatusReducer, selectAPIStatus, updateAPIStatus, initializeAPICallEpic};
+export {apiStatusReducer, selectAPIStatus, apiStarted, apiLoaded, apiErrored};

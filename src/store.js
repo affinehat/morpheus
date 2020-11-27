@@ -31,7 +31,6 @@ const preloadedState = loadState()
 
 const epicMiddleware = createEpicMiddleware()
 const rootEpic = combineEpics(
-  initializeAPICallEpic,
   rhymebrainEpic,
   datamuseEpic,
 )

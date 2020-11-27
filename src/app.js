@@ -19,8 +19,8 @@ const App = () => {
             <div className="min-h-screen">
               <APIsStatus className="ml-2 mb-8"/>
               <div className="min-h-vh grid grid-rows-6">
-                <RhymebrainInfoPanel className="apiSection ml-2 mb-8"/>
-                <DatamuseInfoPanel className="apiSection ml-2 mb-8"/>
+                <RhymebrainInfoPanel className="ml-2 mb-8"/>
+                <DatamuseInfoPanel className="ml-2 mb-8"/>
               </div>
             </div>
           </div>

@@ -1,21 +1,18 @@
 import React, {useEffect, useRef, useState} from "react";
 import {useSelector} from "react-redux";
+import {isEmpty} from "lodash";
 
 import {selectAPIStatus} from "api/apiStatus";
 
 const APIsStatus = props => {
   const loadingStatus = useSelector(selectAPIStatus);
-  const [loaded, setLoaded] = useState("");
+  const hideStatus = isEmpty(loadingStatus);
+  const loaded = Object.values(loadingStatus).every(e => !!e);
+  const status = loaded ? "Done" : "Loading...";
 
-  useEffect(() => {
-    const cumAPIArr = Object.entries(loadingStatus);
-    const cumAPIsArrReducer = cumAPIArr.reduce((accumulator, currentValue) => {
-      return accumulator + (currentValue[1] ? 1 : 0);
-    }, 0);
-    setLoaded(cumAPIArr.length == cumAPIsArrReducer ? "Done" : "Loading...");
-  }, [useSelector(selectAPIStatus)]);
-
-  return <div {...props}>Status: {loaded}</div>;
+  return hideStatus ? null : (
+    <div {...props}>Status: {status}</div>
+  );
 };
 
 export default APIsStatus;
