@@ -4,7 +4,7 @@ import {isEmpty} from "lodash";
 
 import {selectAPIStatus} from "api/apiStatus";
 
-const APIsStatus = props => {
+const APIsStatusDisplay = props => {
   const loadingStatus = useSelector(selectAPIStatus);
   const hideStatus = isEmpty(loadingStatus);
   const loaded = Object.values(loadingStatus).every(e => !!e);
@@ -15,4 +15,4 @@ const APIsStatus = props => {
   );
 };
 
-export default APIsStatus;
+export default APIsStatusDisplay;
