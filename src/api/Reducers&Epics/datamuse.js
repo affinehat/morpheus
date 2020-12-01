@@ -36,7 +36,7 @@ const datamuseEpic = action$ =>
     filterUnchangedOrEmpty(),
     switchMap(action =>
       concat(
-        of(apiStarted("datamuseRhymesLoaded")),
+        of(apiStarted("datamuseRhymesLoaded"), apiStarted("datamuseSynonymsLoaded")),
         from(
           callAPI({
             protocol: "https",
@@ -51,7 +51,6 @@ const datamuseEpic = action$ =>
             );
           })
         ),
-        of(apiStarted("datamuseSynonymsLoaded")),
         from(
           callAPI({
             protocol: "https",
