@@ -4,7 +4,7 @@ import { from } from 'rxjs'
 
 import editorReducer from 'editor/editorSlice'
 import { apiStatusReducer } from 'api/apiStatus'
-import { datamuseReducer, datamuseRhymesEpic, datamuseSynonymsEpic } from 'api/Reducers&Epics/datamuse'
+import { datamuseReducer, datamuseEpic } from 'api/Reducers&Epics/datamuse'
 
 const loadState = () => {
   try {
@@ -30,8 +30,7 @@ const preloadedState = loadState()
 
 const epicMiddleware = createEpicMiddleware()
 const rootEpic = combineEpics(
-  datamuseRhymesEpic,
-  datamuseSynonymsEpic,
+  datamuseEpic,
 )
 
 const store = configureStore({

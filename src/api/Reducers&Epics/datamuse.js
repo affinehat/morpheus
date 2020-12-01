@@ -3,13 +3,9 @@ import {switchMap, mergeMap} from "rxjs/operators";
 import {createSlice} from "@reduxjs/toolkit";
 import {ofType} from "redux-observable";
 
-import callAPI from "api/apiRequestWrapper";
+import {callAPI, topResults, filterUnchangedOrEmpty} from "api/api";
 import {apiStarted, apiLoaded, apiErrored} from "api/apiStatus";
 import {setCurrentWord} from "editor/editorSlice";
-import {
-  filterUnchangedOrEmptyAPICalls,
-  first20ResultsOrNoMatches
-} from "api/customFunctionsAndOperators";
 
 const datamuseSlice = createSlice({
   name: "datamuse",
@@ -32,10 +28,12 @@ const selectSynonyms = state => state.datamuse.synonyms;
 const datamuseSynonymsLoaded = datamuseSlice.actions.synonymsLoaded;
 const datamuseSynonymsDecoupled = datamuseSlice.actions.synonymsDecoupled;
 
-const datamuseRhymesEpic = action$ =>
+const numResults = 20;
+
+const datamuseEpic = action$ =>
   action$.pipe(
     ofType(setCurrentWord.type),
-    filterUnchangedOrEmptyAPICalls(),
+    filterUnchangedOrEmpty(),
     switchMap(action =>
       concat(
         of(apiStarted("datamuseRhymesLoaded")),
@@ -48,21 +46,11 @@ const datamuseRhymesEpic = action$ =>
         ).pipe(
           mergeMap(ajax => {
             return of(
-              datamuseRhymesLoaded(first20ResultsOrNoMatches(ajax)),
+              datamuseRhymesLoaded(topResults(ajax, numResults)),
               apiLoaded("datamuseRhymesLoaded")
             );
           })
-        )
-      )
-    )
-  );
-
-const datamuseSynonymsEpic = action$ =>
-  action$.pipe(
-    ofType(setCurrentWord.type),
-    filterUnchangedOrEmptyAPICalls(),
-    switchMap(action =>
-      concat(
+        ),
         of(apiStarted("datamuseSynonymsLoaded")),
         from(
           callAPI({
@@ -73,7 +61,7 @@ const datamuseSynonymsEpic = action$ =>
         ).pipe(
           mergeMap(ajax => {
             return of(
-              datamuseSynonymsLoaded(first20ResultsOrNoMatches(ajax)),
+              datamuseSynonymsLoaded(topResults(ajax, numResults)),
               apiLoaded("datamuseSynonymsLoaded")
             );
           })
@@ -87,9 +75,8 @@ export {
   selectRhymes,
   datamuseRhymesLoaded,
   datamuseRhymesDecoupled,
-  datamuseRhymesEpic,
   selectSynonyms,
   datamuseSynonymsLoaded,
   datamuseSynonymsDecoupled,
-  datamuseSynonymsEpic
+  datamuseEpic
 };
