@@ -12,9 +12,9 @@ const datamuseSlice = createSlice({
   initialState: {},
   reducers: {
     rhymesLoaded: (state, action) => void (state.rhymes = action.payload),
-    rhymesDecoupled: (state, action) => void (state.rhymes = null),
+    rhymesDeleted: (state, action) => void (state.rhymes = null),
     synonymsLoaded: (state, action) => void (state.synonyms = action.payload),
-    synonymsDecoupled: (state, action) => void (state.synonyms = null)
+    synonymsDeleted: (state, action) => void (state.synonyms = null)
   }
 });
 
@@ -22,11 +22,11 @@ const datamuseReducer = datamuseSlice.reducer;
 
 const selectRhymes = state => state.datamuse.rhymes;
 const datamuseRhymesLoaded = datamuseSlice.actions.rhymesLoaded;
-const datamuseRhymesDecoupled = datamuseSlice.actions.rhymesDecoupled;
+const datamuseRhymesDeleted = datamuseSlice.actions.rhymesDeleted;
 
 const selectSynonyms = state => state.datamuse.synonyms;
 const datamuseSynonymsLoaded = datamuseSlice.actions.synonymsLoaded;
-const datamuseSynonymsDecoupled = datamuseSlice.actions.synonymsDecoupled;
+const datamuseSynonymsDeleted = datamuseSlice.actions.synonymsDeleted;
 
 const numResults = 20;
 
@@ -73,9 +73,9 @@ export {
   datamuseReducer,
   selectRhymes,
   datamuseRhymesLoaded,
-  datamuseRhymesDecoupled,
+  datamuseRhymesDeleted,
   selectSynonyms,
   datamuseSynonymsLoaded,
-  datamuseSynonymsDecoupled,
+  datamuseSynonymsDeleted,
   datamuseEpic
 };
