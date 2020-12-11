@@ -11,6 +11,8 @@ import { set } from 'lodash'
 const apiSlice = createSlice({
   name: 'apis',
   initialState: {
+    datamuseRhyme: { status: 'not started' },
+    datamuseSynonym: { status: 'not started' },
     rhymebrainRhyme: { status: 'not started' },
     rhymebrainWordInfo: { status: 'not started' },
     rhymebrainPortmanteau: { status: 'not started' },
