@@ -1,38 +1,94 @@
-import { tap, map, switchMap, distinctUntilKeyChanged, filter } from 'rxjs/operators'
-import { createSlice } from '@reduxjs/toolkit'
+import { merge } from 'rxjs'
+import { map, switchMap } from 'rxjs/operators'
 import { ofType } from 'redux-observable'
 
-import callAPI from 'api/api'
+import {
+  callApi, extractCurrentWord, topResults,
+  filterUnchangedOrEmpty, apiResultTransformer
+} from 'api/api'
+
 import { setCurrentWord } from 'editor/editorSlice'
 
+// api calls
+// --------------------------------
 
-const rhymebrainSlice = createSlice({
-  name: 'rhymebrain',
-  initialState: null,
-  reducers: {
-    loaded: (state, action) => action.payload,
-  },
+// for rhyme/portmanteau api calls, we only want a subset of results
+const maxRhymes = 20
+const maxPortmanteaus = 10
+const processRhymebrainResult = apiResultTransformer((results, api) => {
+  if (api.type === 'rhymebrainRhyme') {
+    return topResults(results, maxRhymes)
+  } else if (api.type === 'rhymebrainPortmanteau') {
+    return topResults(results, maxPortmanteaus)
+  }
+
+  return results
 })
 
-const rhymebrainLoaded = rhymebrainSlice.actions.loaded
+const callRhymebrainApi = (options) => {
+  const baseOptions = {
+    protocol: 'https',
+    host: 'rhymebrain.com',
+  }
+  const combinedOptions = { ...baseOptions, ...options }
 
-const rhymebrainEpic = action$ => action$.pipe(
-  ofType(setCurrentWord.type),
-  distinctUntilKeyChanged('payload'),
-  filter(action => action.payload.trim() !== ''),
-  //tap(x => console.log(x)),
-  switchMap(action =>
-    callAPI({
-      protocol: 'https',
-      host: 'rhymebrain.com',
-      path: 'talk?function=getRhymes&word=' + action.payload,
-    }).pipe(
-      map(ajax => rhymebrainLoaded(ajax.response.slice(0, 20)))
+  return callApi(combinedOptions).pipe(map(processRhymebrainResult))
+}
+
+const callRhymeApi = (word) => {
+  const rhymeApiOptions = {
+    type: 'rhymebrainRhyme',
+    path: 'talk?function=getRhymes&word=' + word,
+  }
+
+  return callRhymebrainApi(rhymeApiOptions)
+}
+
+const callWordInfoApi = (word) => {
+  const wordInfoApiOptions = {
+    type: 'rhymebrainWordInfo',
+    path: 'talk?function=getWordInfo&word=' + word,
+  }
+
+  return callRhymebrainApi(wordInfoApiOptions)
+}
+
+const callPortmanteauApi = (word) => {
+  const portmanteausApiOptions = {
+    type: 'rhymebrainPortmanteau',
+    path: 'talk?function=getPortmanteaus&word=' + word,
+  }
+
+  return callRhymebrainApi(portmanteausApiOptions)
+}
+
+// rhymebrain epic
+// --------------------------------
+const rhymebrainEpic = action$ =>
+  action$.pipe(
+    ofType(setCurrentWord.type),
+    map(extractCurrentWord),
+    filterUnchangedOrEmpty(),
+    switchMap(currentWord =>
+      merge(
+        // callRhymeApi(currentWord),
+        callWordInfoApi(currentWord),
+        callPortmanteauApi(currentWord),
+      )
     )
   )
-)
 
-const selectRhymes = state => state.rhymebrain
+// selectors
+// --------------------------------
+const selectRhymes = state => state.api.rhymebrainRhyme.result
+const selectWordInfo = state => state.api.rhymebrainWordInfo.result
+const selectPortmanteaus = state => state.api.rhymebrainPortmanteau.result
 
-export { rhymebrainEpic, selectRhymes }
-export const rhymebrainReducer = rhymebrainSlice.reducer
+// exports
+// --------------------------------
+export {
+  rhymebrainEpic,
+  selectRhymes,
+  selectWordInfo,
+  selectPortmanteaus,
+}

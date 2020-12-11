@@ -11,6 +11,9 @@ import { set } from 'lodash'
 const apiSlice = createSlice({
   name: 'apis',
   initialState: {
+    rhymebrainRhyme: { status: 'not started' },
+    rhymebrainWordInfo: { status: 'not started' },
+    rhymebrainPortmanteau: { status: 'not started' },
   },
   reducers: {
     started: (state, action) => void (state[action.payload.type].status = 'started'),
