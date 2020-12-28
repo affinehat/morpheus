@@ -6,6 +6,7 @@ import editorReducer from 'editor/editorSlice'
 import { apiCallReducer } from 'api/api'
 import { datamuseEpic } from 'api/datamuse'
 import { rhymebrainEpic } from 'api/rhymebrain'
+import { urbandictionaryEpic } from 'api/urbandictionary'
 
 const loadState = () => {
   try {
@@ -33,6 +34,7 @@ const epicMiddleware = createEpicMiddleware()
 const rootEpic = combineEpics(
   datamuseEpic,
   rhymebrainEpic,
+  urbandictionaryEpic
 )
 
 const store = configureStore({
