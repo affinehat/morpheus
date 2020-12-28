@@ -3194,6 +3194,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "dotenv-defaults@npm:2.0.1"
+  dependencies:
+    dotenv: ^8.2.0
+  checksum: 53ac7d987bb9de5d9be0f76040460f398cd56708833143f95ed48732c8d73cf55868d4b368c4eb6dbeba704263da7262623c33557c897f5c06262973477abf0d
+  languageName: node
+  linkType: hard
+
+"dotenv-webpack@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "dotenv-webpack@npm:6.0.0"
+  dependencies:
+    dotenv-defaults: ^2.0.1
+  peerDependencies:
+    webpack: ^1 || ^2 || ^3 || ^4 || ^5
+  checksum: e35194a34d0d35506e727831db603089da1685802bfed12a9ecdd382f6e85849a2b6aef694677db83d06f1b786d5bb6d8da3c45b35e3d5ca7fb5a0303a91ae54
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "dotenv@npm:8.2.0"
+  checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
+  languageName: node
+  linkType: hard
+
 "duplexify@npm:^3.4.2, duplexify@npm:^3.6.0":
   version: 3.7.1
   resolution: "duplexify@npm:3.7.1"
@@ -5451,6 +5478,7 @@ fsevents@~2.1.2:
     autoprefixer: ^10.0.1
     babel-loader: ^8.1.0
     css-loader: ^5.0.0
+    dotenv-webpack: ^6.0.0
     lodash: ^4.17.20
     pnp-webpack-plugin: ^1.6.4
     postcss: ^8.1.2
