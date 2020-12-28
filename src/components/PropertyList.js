@@ -11,7 +11,7 @@ export const PropertyList = props => {
       <dt className="text-right">
         {entry[0]}:
       </dt>,
-      <dd className="mx-6">
+      <dd>
         {entry[1]}
       </dd>
     ]
@@ -19,7 +19,7 @@ export const PropertyList = props => {
 
   const showInfo = (info) => {
     return (
-      <dl className="grid grid-cols-property-list"> {info.map(entry => entry)} </dl>
+      <dl className="grid grid-cols-property-list gap-x-6"> {info.map(entry => entry)} </dl>
     )
   }
 

@@ -29,7 +29,7 @@ export const UrbandictionaryResults = props => {
   return (
     <Panel {...otherProps}>
       <h3>{type}:</h3>
-      <div className="mx-6">
+      <div className="overflow-y-auto max-h-data mx-6">
         <PropertyList info={displayedUdWordInfo} emptyMessage="No matches found."/>
       </div>
     </Panel>
