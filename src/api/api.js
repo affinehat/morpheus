@@ -16,6 +16,7 @@ const apiSlice = createSlice({
     rhymebrainRhyme: { status: 'not started' },
     rhymebrainWordInfo: { status: 'not started' },
     rhymebrainPortmanteau: { status: 'not started' },
+    urbandictionaryWordInfo: { status: 'not started' },
   },
   reducers: {
     started: (state, action) => void (state[action.payload.type].status = 'started'),

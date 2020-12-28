@@ -12,15 +12,14 @@ export const WordGrid = props => {
 
   // show words in a grid if they exist, otherwise show the empty message
   const showEmptyMessage = <span>{emptyMessage}</span>
-  const showGrid = words.map(
+  const gridWrapper = words.map(
     (word, index) => (<span key={index}>{word}</span>)
   )
+  const showGrid = (grid) => {
+    return <div className={classes}> {grid} </div>
+  }
 
-  return (
-    <div className={classes}>
-      {words.length ? showGrid : showEmptyMessage}
-    </div>
-  )
+  return (words.length ? showGrid(gridWrapper) : showEmptyMessage)
 }
 
 export default WordGrid
